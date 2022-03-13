@@ -92,6 +92,7 @@ cv_show('gradX',gradX)
 gradX = cv2.morphologyEx(gradX, cv2.MORPH_CLOSE, rectKernel) 
 cv_show('gradX',gradX)
 #THRESH_OTSU会自动寻找合适的阈值，适合双峰，需把阈值参数设置为0
+# 二值处理
 thresh = cv2.threshold(gradX, 0, 255,
 	cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1] 
 cv_show('thresh',thresh)
